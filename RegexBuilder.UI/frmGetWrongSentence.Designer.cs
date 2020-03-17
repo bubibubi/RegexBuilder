@@ -50,7 +50,7 @@
             this.btnOk.Location = new System.Drawing.Point(294, 109);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(45, 23);
-            this.btnOk.TabIndex = 3;
+            this.btnOk.TabIndex = 1;
             this.btnOk.Text = "&Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             // 

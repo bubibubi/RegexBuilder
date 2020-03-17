@@ -1,6 +1,6 @@
 ﻿namespace RegexBuilder.UI
 {
-    partial class frmMain
+    partial class frmRegexBuilder
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegexBuilder));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,9 +38,10 @@
             this.btnExecute = new System.Windows.Forms.Button();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lstInformations = new ctlList();
-            this.lstWrongSentences = new ctlList();
-            this.lstSimilarSentences = new ctlList();
+            this.lstInformations = new RegexBuilder.UI.ctlList();
+            this.lstWrongSentences = new RegexBuilder.UI.ctlList();
+            this.lstSimilarSentences = new RegexBuilder.UI.ctlList();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.label1.Location = new System.Drawing.Point(187, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 22);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Similar sentences";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -62,7 +63,7 @@
             this.label2.Location = new System.Drawing.Point(187, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 22);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Wrong sentences";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -79,12 +80,12 @@
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(12, 285);
+            this.btnSave.Location = new System.Drawing.Point(596, 321);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "&Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
@@ -92,12 +93,12 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(12, 314);
+            this.btnLoad.Location = new System.Drawing.Point(515, 321);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
-            this.btnLoad.TabIndex = 7;
+            this.btnLoad.TabIndex = 6;
             this.btnLoad.Text = "&Load";
             this.btnLoad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -105,12 +106,12 @@
             // 
             // btnExecute
             // 
-            this.btnExecute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExecute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecute.Image = ((System.Drawing.Image)(resources.GetObject("btnExecute.Image")));
-            this.btnExecute.Location = new System.Drawing.Point(12, 247);
+            this.btnExecute.Location = new System.Drawing.Point(831, 321);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(75, 23);
-            this.btnExecute.TabIndex = 6;
+            this.btnExecute.TabIndex = 9;
             this.btnExecute.Text = "E&xecute";
             this.btnExecute.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExecute.UseVisualStyleBackColor = true;
@@ -135,10 +136,11 @@
             // 
             this.lstInformations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstInformations.ButtonsEnabled = true;
             this.lstInformations.Location = new System.Drawing.Point(12, 34);
             this.lstInformations.Name = "lstInformations";
-            this.lstInformations.Size = new System.Drawing.Size(149, 197);
-            this.lstInformations.TabIndex = 8;
+            this.lstInformations.Size = new System.Drawing.Size(149, 274);
+            this.lstInformations.TabIndex = 1;
             this.lstInformations.Add += new System.EventHandler(this.lstInformations_Add);
             this.lstInformations.Remove += new System.EventHandler(this.lstInformations_Remove);
             // 
@@ -147,11 +149,12 @@
             this.lstWrongSentences.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstWrongSentences.ButtonsEnabled = true;
             this.lstWrongSentences.ContextMenuStrip = this.contextMenuStrip;
             this.lstWrongSentences.Location = new System.Drawing.Point(188, 202);
             this.lstWrongSentences.Name = "lstWrongSentences";
-            this.lstWrongSentences.Size = new System.Drawing.Size(718, 135);
-            this.lstWrongSentences.TabIndex = 2;
+            this.lstWrongSentences.Size = new System.Drawing.Size(718, 106);
+            this.lstWrongSentences.TabIndex = 5;
             this.lstWrongSentences.Add += new System.EventHandler(this.lstWrongSentences_Add);
             this.lstWrongSentences.Remove += new System.EventHandler(this.lstWrongSentences_Remove);
             // 
@@ -159,15 +162,29 @@
             // 
             this.lstSimilarSentences.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstSimilarSentences.ButtonsEnabled = true;
             this.lstSimilarSentences.Location = new System.Drawing.Point(188, 34);
             this.lstSimilarSentences.Name = "lstSimilarSentences";
             this.lstSimilarSentences.Size = new System.Drawing.Size(718, 125);
-            this.lstSimilarSentences.TabIndex = 1;
+            this.lstSimilarSentences.TabIndex = 3;
             this.lstSimilarSentences.Add += new System.EventHandler(this.lstSimilarSentences_Add);
             this.lstSimilarSentences.Remove += new System.EventHandler(this.lstSimilarSentences_Remove);
             this.lstSimilarSentences.Edit += new System.EventHandler(this.lstSimilarSentences_Edit);
             // 
-            // frmMain
+            // btnCheck
+            // 
+            this.btnCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheck.Image = ((System.Drawing.Image)(resources.GetObject("btnCheck.Image")));
+            this.btnCheck.Location = new System.Drawing.Point(723, 321);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.TabIndex = 8;
+            this.btnCheck.Text = "&Check";
+            this.btnCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // frmRegexBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,6 +192,7 @@
             this.Controls.Add(this.lstInformations);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnExecute);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lstWrongSentences);
             this.Controls.Add(this.lstSimilarSentences);
@@ -182,7 +200,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmMain";
+            this.Name = "frmRegexBuilder";
             this.Text = "Regex Builder";
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -202,6 +220,7 @@
         private System.Windows.Forms.Button btnExecute;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+        private System.Windows.Forms.Button btnCheck;
     }
 }
 

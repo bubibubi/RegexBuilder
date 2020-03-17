@@ -67,7 +67,7 @@
             this.label2.Location = new System.Drawing.Point(12, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 4;
             this.label2.Text = "False positives";
             // 
             // txtFalsePositives
@@ -76,7 +76,7 @@
             this.txtFalsePositives.Name = "txtFalsePositives";
             this.txtFalsePositives.ReadOnly = true;
             this.txtFalsePositives.Size = new System.Drawing.Size(100, 20);
-            this.txtFalsePositives.TabIndex = 1;
+            this.txtFalsePositives.TabIndex = 5;
             this.txtFalsePositives.Text = "(computing)";
             // 
             // label3
@@ -85,7 +85,7 @@
             this.label3.Location = new System.Drawing.Point(200, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 13);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 6;
             this.label3.Text = "on";
             // 
             // txtFalseTotals
@@ -94,7 +94,7 @@
             this.txtFalseTotals.Name = "txtFalseTotals";
             this.txtFalseTotals.ReadOnly = true;
             this.txtFalseTotals.Size = new System.Drawing.Size(100, 20);
-            this.txtFalseTotals.TabIndex = 1;
+            this.txtFalseTotals.TabIndex = 7;
             // 
             // label4
             // 
@@ -102,7 +102,7 @@
             this.label4.Location = new System.Drawing.Point(200, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 13);
-            this.label4.TabIndex = 0;
+            this.label4.TabIndex = 2;
             this.label4.Text = "on";
             // 
             // txtTrueTotal
@@ -111,7 +111,7 @@
             this.txtTrueTotal.Name = "txtTrueTotal";
             this.txtTrueTotal.ReadOnly = true;
             this.txtTrueTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTrueTotal.TabIndex = 1;
+            this.txtTrueTotal.TabIndex = 3;
             // 
             // lstSentences
             // 
@@ -123,7 +123,7 @@
             this.lstSentences.Location = new System.Drawing.Point(12, 97);
             this.lstSentences.Name = "lstSentences";
             this.lstSentences.Size = new System.Drawing.Size(420, 342);
-            this.lstSentences.TabIndex = 2;
+            this.lstSentences.TabIndex = 10;
             this.lstSentences.SelectedIndexChanged += new System.EventHandler(this.lstSentences_SelectedIndexChanged);
             // 
             // lstVariables
@@ -135,7 +135,7 @@
             this.lstVariables.Location = new System.Drawing.Point(438, 97);
             this.lstVariables.Name = "lstVariables";
             this.lstVariables.Size = new System.Drawing.Size(350, 342);
-            this.lstVariables.TabIndex = 2;
+            this.lstVariables.TabIndex = 11;
             // 
             // label5
             // 
@@ -143,7 +143,7 @@
             this.label5.Location = new System.Drawing.Point(12, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 0;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Regex";
             // 
             // txtRegex
@@ -153,7 +153,7 @@
             this.txtRegex.Location = new System.Drawing.Point(94, 64);
             this.txtRegex.Name = "txtRegex";
             this.txtRegex.Size = new System.Drawing.Size(694, 20);
-            this.txtRegex.TabIndex = 1;
+            this.txtRegex.TabIndex = 9;
             // 
             // frmReport
             // 

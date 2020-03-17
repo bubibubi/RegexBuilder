@@ -46,7 +46,7 @@
             this.btnOk.Location = new System.Drawing.Point(296, 10);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 1;
+            this.btnOk.TabIndex = 2;
             this.btnOk.Text = "&Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -57,7 +57,7 @@
             this.cmbInformationType.Location = new System.Drawing.Point(159, 11);
             this.cmbInformationType.Name = "cmbInformationType";
             this.cmbInformationType.Size = new System.Drawing.Size(121, 21);
-            this.cmbInformationType.TabIndex = 2;
+            this.cmbInformationType.TabIndex = 1;
             // 
             // frmGetInformation
             // 

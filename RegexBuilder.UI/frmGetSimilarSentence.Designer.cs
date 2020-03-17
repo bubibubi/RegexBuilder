@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGetSimilarSentence));
             this.txtSentence = new System.Windows.Forms.TextBox();
-            this.ctlList = new ctlList();
+            this.ctlList = new RegexBuilder.UI.ctlList();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -50,10 +50,11 @@
             // 
             this.ctlList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctlList.ButtonsEnabled = true;
             this.ctlList.Location = new System.Drawing.Point(0, 161);
             this.ctlList.Name = "ctlList";
             this.ctlList.Size = new System.Drawing.Size(343, 93);
-            this.ctlList.TabIndex = 1;
+            this.ctlList.TabIndex = 2;
             this.ctlList.Add += new System.EventHandler(this.ctlList_Add);
             this.ctlList.Remove += new System.EventHandler(this.ctlList_Remove);
             this.ctlList.SelectedItemChanged += new System.EventHandler(this.ctlList_SelectedItemChanged);
@@ -64,7 +65,7 @@
             this.label1.Location = new System.Drawing.Point(12, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Informations";
             // 
             // btnOk

@@ -10,9 +10,9 @@ using RegexBuilder.Engine;
 
 namespace RegexBuilder.UI
 {
-    public partial class frmMain : Form
+    public partial class frmRegexBuilder : Form
     {
-        public frmMain()
+        public frmRegexBuilder()
         {
             InitializeComponent();
         }
@@ -28,6 +28,23 @@ namespace RegexBuilder.UI
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [Browsable(false)]
         public IEnumerable<Information> Informations { get; set; }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Browsable(false)]
+        public string Regex { get; set; }
+
+        public bool SaveEnabled
+        {
+            get { return btnSave.Enabled; }
+            set { btnSave.Enabled = value; }
+        }
+
+        public bool LoadEnabled
+        {
+            get { return btnLoad.Enabled; }
+            set { btnLoad.Enabled = value; }
+        }
+
 
         protected override void OnLoad(EventArgs e)
         {
@@ -136,6 +153,12 @@ namespace RegexBuilder.UI
             lstWrongSentences.AddItems(trainingSet.WrongSentences);
         }
 
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            frmRegexChecker.Show(Regex, lstSimilarSentences.SelectedItem == null ? null : ((Sentence)lstSimilarSentences.SelectedItem).Text);
+        }
+
         private void lstInformations_Add(object sender, EventArgs e)
         {
             Information information;
@@ -177,12 +200,11 @@ namespace RegexBuilder.UI
                 WrongSentences = lstWrongSentences.Items.Cast<string>().ToList()
             };
 
-            string regex = trainingSet.GetRegex();
+            Regex = trainingSet.GetRegex();
 
-            frmReport.Show(trainingSet, regex);
+            frmReport.Show(trainingSet, Regex);
 
         }
-
 
     }
 }
