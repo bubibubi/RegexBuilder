@@ -51,5 +51,8 @@
     <Compile Include="SentenceInformationCollection.cs" />
     <Compile Include="TrainingSet.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="RegexBuilder.Engine.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

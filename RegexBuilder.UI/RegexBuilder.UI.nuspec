@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>RegexBuilder.UI</id>
+        <title>Regex Builder Windows Forms User Interface</title>
+        <version>$version$</version>
+        <authors>Bubi</authors>
+        <projectUrl>https://github.com/bubibubi/RegexBuilder</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Regex Builder starting from a training set</description>
+        <tags>Regex</tags>
+        <dependencies>
+            <dependency id="RegexBuilder.Engine" version="1.0"/>
+        </dependencies>
+    </metadata>
+</package>
