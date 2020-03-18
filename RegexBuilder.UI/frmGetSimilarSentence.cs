@@ -36,7 +36,8 @@ namespace RegexBuilder.UI
             frm._informations = informations;
 
             frm.txtSentence.Text = sentence.Text;
-            frm.ctlList.Items.AddRange(sentence.Informations.Select(_ => _.Clone()).Cast<object>().ToArray());
+            if (sentence.Informations != null)
+                frm.ctlList.Items.AddRange(sentence.Informations.Select(_ => _.Clone()).Cast<object>().ToArray());
 
             var result = frm.ShowDialog();
 
