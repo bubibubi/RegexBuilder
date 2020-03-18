@@ -35,6 +35,9 @@ namespace RegexBuilder.UI
             var frm = new frmGetSimilarSentence();
             frm._informations = informations;
 
+            frm.txtSentence.Text = sentence.Text;
+            frm.ctlList.Items.AddRange(sentence.Informations.Select(_ => _.Clone()).Cast<object>().ToArray());
+
             var result = frm.ShowDialog();
 
             if (result != DialogResult.OK)

@@ -1,6 +1,8 @@
-﻿namespace RegexBuilder.Engine
+﻿using System;
+
+namespace RegexBuilder.Engine
 {
-    public class SentenceInformation
+    public class SentenceInformation : ICloneable
     {
         public SentenceInformation() { }
 
@@ -24,5 +26,19 @@
         {
             return string.Format("{0} ({1}, {2})", Information, Start, Length);
         }
+
+        #region ICloneable implementation
+
+        public SentenceInformation Clone()
+        {
+            return new SentenceInformation(Information, Start, Length);
+        }
+
+        object ICloneable.Clone()
+        {
+            return Clone();
+        }
+
+        #endregion
     }
 }
